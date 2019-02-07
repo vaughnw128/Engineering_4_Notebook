@@ -5,11 +5,11 @@
 The purpose of this assignment was to familiarize ourselves with the Raspberry Pi hardware and using the terminal window to create a hello world message.
 
 ### Materials Used
- 1 USB Hub
- 1 Raspberry Pi Zero
- 1 VGA Cable
- 1 VGA to Mini HDMI
- 2 Micro USB cables
+* 1 USB Hub
+* 1 Raspberry Pi Zero
+* 1 VGA Cable
+* 1 VGA to Mini HDMI
+* 2 Micro USB cables
 
 ### Process
 Our process was very simple. Vaughn and I are sharing a pi so its easier to progress and we need two separate computers to read the instructions on one and do work on the other. We first set up our components, and with Jack's help we reconfigured the wiring so we don't have to plug in the USB Hub underneath the table. After that we set up the terminal window and followed the instructions to create our program, and to repeat the message 10 times we used a for loop.
