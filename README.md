@@ -57,7 +57,7 @@ The purpose of this assignment is to write a program that returns the sum, diffe
  2 Micro USB cables
 
 ### Process
-i an tinkin of bone juic i drank and slurp down the altdim
+juice
 
 ## Python Program 02
 
