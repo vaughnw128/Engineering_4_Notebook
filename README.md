@@ -74,3 +74,18 @@ Write a simple program that solves quadratic functions
 ### Process
 We basically wrote a program to separate out a b and c in the quadratic and plug it into the discriminant to solve it.
 
+## Hangman
+
+### Description
+Write a hangman game with a little graphic
+
+### Materials Used
+* 1 USB Hub
+* 1 Raspberry Pi Zero
+* 1 VGA Cable
+* 1 VGA to Mini HDMI
+* 2 Micro USB cables
+
+### Process
+This one was cool. Seems really hard on the surface in my eyes, but once you get down to it, it's real easy. Started out writing a function to update the display at the start of every guess by running a for loop through a list that had the elements be equal to what I wanted displayed. Then it would let a person guess and see if the the guess was contained in the string, and then checked the score. All in all, pretty easy.
+
