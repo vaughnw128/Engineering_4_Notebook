@@ -6,7 +6,7 @@ import os
 
 #Global Variables
 gameEnd = False
-score = 8
+score = 0
 wordDisplay = []
 progWord = 0
 
@@ -40,7 +40,7 @@ while not gameEnd:
     print("")
     
     #Check if the game is over
-    if(score == 0):
+    if(score == 8):
         print("You Lose.")
         endif = input()
         gameEnd = True
@@ -53,7 +53,7 @@ while not gameEnd:
     if not gameEnd:
         guess = str(input("Player 2, Guess: "))
         if(guess not in word):
-            score = score - 1
+            score = score + 1
         else:
             for i in range(0, len(word)):
                 if(word[i] == guess):
