@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>LED Emporium!</title>
+
+<style>
+	body {
+		text-align: center;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+
+	h1 {
+                text-align: center;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+	input.greenled{
+		
+		height: 25%;
+		width: 25%;
+	}
+
+	input.blueled{
+		height: 33%;
+		width: 33%;
+	}
+
+	.row{
+		display: flex;
+		padding: 10px;
+		align-items: center;
+	}
+
+</style>
+</head>
+
+<h1>
+Welcome to Vaughn and Charlie's LED Emporium!
+</h1>
+
+
+<body>
+Click a button to choose your LED color.
+<form method="POST">
+		<div class="row">
+			<input type="image" class="greenled" name="greenLEDSubmit" src="../static/greenled.jpg" alt="Green LED Button" style="padding: 10px"/>
+			<input type="image" class="blueled" name="blueLEDSubmit" src="../static/blueled.jpg" alt="Blue LED Button" style="padding: 10px"/>
+		</div>
+</form>
+</body>
+</html>
