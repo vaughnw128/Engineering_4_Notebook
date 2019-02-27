@@ -14,21 +14,15 @@
                 font-family: "Comic Sans MS", cursive, sans-serif;
         }
 
-	input.greenled{
-		
-		height: 25%;
-		width: 25%;
+	.ledImages{
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 350px;
 	}
 
-	input.blueled{
-		height: 33%;
-		width: 33%;
-	}
-
-	.row{
-		display: flex;
-		padding: 10px;
-		align-items: center;
+	#images{
+		text-align: center;
 	}
 
 </style>
@@ -42,10 +36,10 @@ Welcome to Vaughn and Charlie's LED Emporium!
 <body>
 Click a button to choose your LED color.
 <form method="POST">
-		<div class="row">
-			<input type="image" class="greenled" name="greenLEDSubmit" src="../static/greenled.jpg" alt="Green LED Button" style="padding: 10px"/>
-			<input type="image" class="blueled" name="blueLEDSubmit" src="../static/blueled.jpg" alt="Blue LED Button" style="padding: 10px"/>
-		</div>
+	<div id="images">
+		<input type="image" class="ledImages" name="greensubmit" src="../static/greenled.jpg" alt="Green LED Button" style="padding: 10px"/>
+		<input type="image" class="ledImages" name="bluesubmit" src="../static/blueled.jpg" alt="Blue LED Button" style="padding: 10px"/>
+	</div>
 </form>
 </body>
 </html>
