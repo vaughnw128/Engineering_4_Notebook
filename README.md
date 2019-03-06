@@ -89,3 +89,17 @@ Write a hangman game with a little graphic
 ### Process
 This one was cool. Seems really hard on the surface in my eyes, but once you get down to it, it's real easy. Started out writing a function to update the display at the start of every guess by running a for loop through a list that had the elements be equal to what I wanted displayed. Then it would let a person guess and see if the the guess was contained in the string, and then checked the score. All in all, pretty easy.
 
+## Flask GPIO
+
+### Description
+Make a website turn LEDs on and off
+
+### Materials Used
+* 1 USB Hub
+* 1 Raspberry Pi Zero
+* 1 VGA Cable
+* 1 VGA to Mini HDMI
+* 2 Micro USB cables
+
+### Process 
+We took two images to use as buttons, and then modeled the code somewhat around the base code, but made it so we could take in the button press as form inputs rather than checking for GET vs POST data. It took a lot of editing, but it ended up happening, and works just how we wanted it to.
