@@ -32,6 +32,9 @@ size = 15
 movingAverageX = [0.00] * size
 movingAverageY = [0.00] * size
 
+#Defining coordinate points
+center = [width/2, height/2]
+ballPos = [0.00] * 2
 #Takes a moving average of all X and Y accelerometer values at a specified size
 def movingAverage(accel, movingAverage):
 	#Handles the list with arrayHandler
@@ -52,6 +55,25 @@ def listHandler(list, add, size):
 		list[i] = list[i+1]
 	list[size-1] = add
 
+#TODO: IMPLEMENT LOCATION FINDER, USE MAG OF LOCATION VECTOR TO DETERMINE ROLL SPEED, DONT LET ROLL OFF SCREEN
+
+#Gets position based on which quadrant it's in
+def getPos(dist):
+
+
+#Gets which quadrant a position is in
+def getQuadrant(dist):
+	if dist[0] >= width/2:
+		if dist[1] >= height/2:
+			return 4
+		else:
+			return 1
+	else:
+		if dist[1] >= height/2:
+			return 2
+		else:
+			return 3
+
 #Loops the code
 while(True):
 	# Read the X, Y, Z axis acceleration values and print them.
@@ -62,12 +84,12 @@ while(True):
 	mag_x, mag_y, mag_z = mag
 
 	#Maps the inputs useing numpy.interp to get it to the right size of the screen
-	locX = interp(accel_x,[-1000,1000],[1,0])*disp.width*2
-	locY = interp(accel_y,[-1000,1000],[0,1])*disp.height*2
+	dist[0] = interp(accel_x,[-1000,1000],[1,0])*disp.width*2
+	dist[1] = interp(accel_y,[-1000,1000],[0,1])*disp.height*2
 
 	#Takes moving average of the values
-	avLocX = movingAverage(locX, movingAverageX)
-	avLocY = movingAverage(locY, movingAverageY)
+	avLocX = movingAverage(dist[0], movingAverageX)
+	avLocY = movingAverage(distY[1], movingAverageY)
 
 	#Uses a bounding box to create a circle based on the values specified by the accelerometers
 	eX, eY = 10, 10
@@ -77,8 +99,8 @@ while(True):
 	draw.ellipse(bbox, fill=128)
 
 	#Prints values
-	draw.text((0, 50),('{}'.format(round(avLocX, 2))), font=font, fill=255)
-	draw.text((35, 50),('{}'.format(round(avLocY, 2))), font=font, fill=255)
+	draw.text((0, 50),('{}'.format(round(width, 2))), font=font, fill=255)
+	draw.text((35, 50),('{}'.format(round(height, 2))), font=font, fill=255)
 
 	#Display and then clear
 	disp.image(image)
